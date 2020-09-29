@@ -1,0 +1,11 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+View All Contents
+{% endblock %}
+
+{% block content %}
+    {% for td in user.passsave.all %}
+		<p><a href="/{{td.id}}">{{td.website}}</a></p>
+    {% endfor %}
+{% endblock %}
